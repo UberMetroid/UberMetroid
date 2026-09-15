@@ -1,9 +1,5 @@
 # UberMetroid
 
-<br>
-
-[![Necrometer](necrometer.svg)](https://necrometer.dev/?u=UberMetroid)
-
 ---
 
 ### The Necrometer Ward
@@ -21,7 +17,7 @@ jobs:
   necrometer:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: necrometer-dev/necrometer-action@v1
         with:
           token: ${{ secrets.NECRO_TOKEN || secrets.GITHUB_TOKEN }}
@@ -30,3 +26,7 @@ jobs:
 ```markdown
 [![Necrometer](necrometer.svg)](https://necrometer.dev/?u=UberMetroid)
 ```
+
+---
+
+[![Necrometer](necrometer.svg)](https://necrometer.dev/?u=UberMetroid)
