@@ -29,4 +29,8 @@ jobs:
 
 ---
 
+<div align="center">
+
 [![Necrometer](necrometer.svg)](https://necrometer.dev/?u=UberMetroid)
+
+</div>
