@@ -4,9 +4,12 @@
 
 **Systems Programmer & Open Source Architect**
 
-Building capability-secure runtimes, verifiable supply-chain tooling, and native Linux & Wayland desktop primitives.
+Building capability-secure computing stacks, zero-dependency systems & agent
+tooling, post-quantum supply-chain gates, and Wayland-native desktop software.
 
-[Website](https://ubermetroid.github.io) • [Kelp](https://ubermetroid.github.io/kelp/) • [studio2201](https://studio2201.com) • [openOODA](https://openooda.org) • [IdleScreen](https://idlescreen.github.io) • [Necrometer](https://necrometer.dev) • [🎓 Tuition, Not Coffee](https://ubermetroid.github.io/tuition-not-coffee/)
+[Website][site] • [openOODA][openooda-site] • [studio2201][studio-site] •
+[agent-ooda][agent-ooda-site] • [IdleScreen][idlescreen-site] •
+[Necrometer][necrometer-site] • [🎓 Tuition, Not Coffee][tuition]
 
 <br />
 
@@ -20,51 +23,175 @@ Building capability-secure runtimes, verifiable supply-chain tooling, and native
 
 ## Organizations & Ecosystems
 
-### [openOODA](https://github.com/openOODA) · [openooda.org](https://openooda.org)
-> **Capability-secure systems programming language for the AI era.**
-- Every external effect requires an explicit, unforgeable capability token — fail-closed by design.
-- Self-hosted Merkle-AST compiler (`oodac`), Landlock/PQC host substrate (`oodar`), 8-domain standard library (`std`), package manager (`opm`), LSP/MCP servers (`lsp`, `mcp`), and TUI harness (`tui`).
-- **258+** capability-bounded POSIX and system replacements in [openOODA-tools](https://github.com/openOODA-tools) (`oosh`, `oogrep`, `oojq`, `oofind`, `oodiff`, `ootail`, `oolandlock`, `oomcprun`, and more).
+### [openOODA][openooda-gh] · [openooda.org][openooda-site]
+> **Capability-secured `L0`–`L7` computing stack built in native `.oo`.**
+- Zero ambient authority: every external effect requires an explicit,
+  single-cycle 64-bit hardware/software capability token (`CapReg64`).
+- **L0 Toolchain ([`@openOODA-core`][oo-core])**: master CLI (`ooda`), native
+  compiler (`oodac`), runtime (`oodar`), scientific & PQC standard library
+  (`oostd`), package manager (`oopm`), `oolsp`, `oomcp`, and 8-hat formal
+  verifier (`oohat`).
+- **Full Stack (`105` product binaries across `L0`–`L7`)**: microkernel & UEFI
+  bootloader ([`@openOODA-kernel`][oo-kernel]), zero-root daemons
+  ([`@openOODA-OS`][oo-os]), `39` sandboxed utilities
+  ([`@openOODA-tools`][oo-tools]), Wayland compositor & desktop
+  ([`@openOODA-DE`][oo-de]), `16` native apps ([`@openOODA-apps`][oo-apps]),
+  mesh cloud ([`@openOODA-cloud`][oo-cloud]), and autonomous OODA loops
+  ([`@openOODA-agents`][oo-agents]) — shipped via
+  [`openOODA/install@hub`][oo-hub] and signed [`openOODA/catalog`][oo-catalog].
 
-### [studio2201](https://github.com/studio2201) · [studio2201.com](https://studio2201.com)
-> **Post-2030 software supply chain governance and attestation.**
-- Five Apache-2.0 auditing tools built with **pure `std::` Rust** (0 crates from crates.io) and strictly **&le; 256 LOC per file**:
-  - [**Snip**](https://github.com/studio2201/snip): Vibe-code, secrets, and PII static analyzer for LLM-generated diffs.
-  - [**Vigil**](https://github.com/studio2201/vigil): Dependency dormancy and unmaintained library scanner across npm, cargo, and pip.
-  - [**Aegis**](https://github.com/studio2201/aegis): NIST Post-Quantum Cryptography (PQC) migration scanner flagging deprecated RSA call sites.
-  - [**Proven**](https://github.com/studio2201/proven): SLSA L3+ attestation engine signed with pure std ML-DSA-65.
-  - [**Boneyard**](https://github.com/studio2201/boneyard): Repository health scoring and dormant public asset radar.
+### [studio2201][studio-gh] · [studio2201.com][studio-site]
+> **Wayland-native GNOME suite & zero-dependency CI/CD supply-chain lab.**
+- **CI/CD Supply-Chain & Post-Quantum Gates**: five Apache-2.0 tools in pure
+  `std::` Rust (`0` `crates.io` crates, ≤ `256` LOC/file) orchestrated via
+  [`studio2201/cli`][st-cli] and [`studio2201/studio2201`][st-action]:
+  - [**Snip**][st-snip]: vibe-code, secrets, PII, and broken-auth diff scanner.
+  - [**Vigil**][st-vigil]: dormant and unmaintained dependency scanner.
+  - [**Aegis**][st-aegis]: NIST Post-Quantum Cryptography readiness auditor.
+  - [**Proven**][st-proven]: reproducible builds and pure-std ML-DSA-65 proof.
+  - [**Boneyard**][st-boneyard]: org-wide repository health and debt scorer.
+- **Ocean Desktop Suite (GNOME Shell 45–50 on Wayland)**: `100%` in-process
+  extensions (`0` `shexli` errors/warnings) with one-click suite color sync:
+  [**Kelp**][st-kelp] (Octopus 2D grid / Seahorse scroller / Otter floating
+  tiler), [**Reef**][st-reef] (window-dodge dock & panel), [**Tide**][st-tide]
+  (`Super` app & window launcher), [**Coral**][st-coral] (app grid &
+  auto-folders), [**Seabed**][st-seabed] (desktop icons), [**Shoal**][st-shoal]
+  (Wayland `SNI`/AppIndicator tray), and [**Sonar**][st-sonar] (8-bit stereo
+  spectrum corners).
 
-### [IdleScreen](https://github.com/idlescreen) · [idlescreen.github.io](https://idlescreen.github.io)
-> **Wayland-native ambient display and 16-bit arcade screensaver suite (`v4.6.3`).**
-- Unified single-binary architecture with an event-driven daemon at 0.00% CPU at idle (~2–3 MB resident), 10-bit HDR deep color, 4K 2x GPU scaling via `wp_viewporter`, dynamic 60–144 Hz refresh matching, and hardware DPMS monitor power-off.
-- **52 built-in 16-bit arcade, demoscene, and mathematical scenes**, interactive TUI director with live mini-preview, headless AV1/H.264 video engine ([`studio`](https://github.com/idlescreen/studio)), and signed APT/RPM/Arch [`packages`](https://github.com/idlescreen/packages) channel.
+### [IdleScreen][idlescreen-gh] · [idlescreen.github.io][idlescreen-site]
+> **Capability-secured ambient display & arcade screensaver (`v5.0.0`).**
+- Built natively in openOODA (`.oo`) for Linux (`ELF`) and Windows (`PE32+`) as
+  a single event-driven binary (`0.00%` idle CPU), with 10-bit HDR deep color,
+  60–144 Hz refresh matching, and hardware DPMS monitor power-off.
+- **53 built-in scenes**, offline AV1/H.264 renderer & Director TUI
+  ([`studio`][idlescreen-studio]), and signed APT/RPM/pacman
+  [`packages`][idlescreen-pkgs] channel.
 
 ---
 
-## Notable Projects & Tools
+## Projects & Tools
 
-| Project | Description | Tech Stack |
-| :--- | :--- | :--- |
-| [**kelp**](https://github.com/UberMetroid/kelp) · [site](https://ubermetroid.github.io/kelp/) | Hyprland-style automatic window tiling (**Octopus** 2D grid, **Seahorse** scrolling strip, **Otter** floating), tabbed stacking, and active focus borders for GNOME 45–51 on Wayland. | GJS, Libadwaita, Wayland |
-| [**glances-rs**](https://github.com/UberMetroid/glances-rs) · [site](https://ubermetroid.github.io/glances-rs/) | Zero-dependency Linux system monitor in one static binary. 24 plugins, 18 exporters, and full REST, SSE, XML-RPC, MCP, CSV, and JSON surfaces. | Pure Rust `std::` |
-| [**necrometer**](https://github.com/necrometer-dev/necrometer) · [necrometer.dev](https://necrometer.dev) | Measures how dead your GitHub repositories are. Zero-server Seance engine compiling to native CLI, WebAssembly, and daily [`necrometer-action`](https://github.com/necrometer-dev/necrometer-action) SVG cards. | Rust, WebAssembly, SMIL SVG |
-| [**ahamkara**](https://github.com/UberMetroid/ahamkara) · [site](https://ubermetroid.github.io/ahamkara/) | Canonical archive and Rust query engine for the Ahamkara wish-dragons of Destiny — living interactive concordance included. | Rust, TypeScript, Pages |
-| [**beatniks-bumtrips-bullshit**](https://github.com/bumtrips/beatniks-bumtrips-bullshit) | Audio archive and field recordings exploring literature, consciousness, and counterculture. | Static Web, Audio |
+<table>
+  <thead>
+    <tr>
+      <th align="left">Project</th>
+      <th align="left">Description</th>
+      <th align="left">Stack</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="https://github.com/UberMetroid/agent-ooda"><strong>agent-ooda</strong></a>
+        · <a href="https://ubermetroid.github.io/agent-ooda/">site</a>
+      </td>
+      <td>
+        Zero-dependency static Go (<code>CGO_ENABLED=0</code>) OODA multi-agent router,
+        cross-model diff verifier, isolated worktree fan-out, and live NDJSON
+        <code>tok/s</code> HUD (<code>agy</code> plugin today; <code>mcode</code> next).
+      </td>
+      <td>Go stdlib</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/necrometer-dev/necrometer"><strong>necrometer</strong></a>
+        · <a href="https://necrometer.dev">site</a>
+      </td>
+      <td>
+        Measures how dead your GitHub repos are — zero-server Seance engine compiling to
+        native CLI, WASM, and daily
+        <a href="https://github.com/necrometer-dev/necrometer-action"><code>necrometer-action</code></a>
+        SMIL SVG gauges.
+      </td>
+      <td>Rust, WASM, SMIL SVG</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/UberMetroid/ahamkara"><strong>ahamkara</strong></a>
+        · <a href="https://ubermetroid.github.io/ahamkara/">site</a>
+      </td>
+      <td>
+        Canonical archive and Rust query engine for the Ahamkara wish-dragons of Destiny —
+        living interactive concordance included.
+      </td>
+      <td>Rust, TypeScript</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/bumtrips/beatniks-bumtrips-bullshit"><strong>beatniks-bumtrips-bullshit</strong></a>
+        · <a href="https://bumtrips.com">site</a>
+      </td>
+      <td>
+        Field-recorded podcast and audio archive exploring literature, consciousness, and
+        counterculture.
+      </td>
+      <td>Static Web, Audio</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
 ## Engineering Constitution
 
-1. **Pure Standard Library**: Favor zero-dependency architectures (`std::` only) where attack surfaces and supply-chain hygiene matter.
-2. **Explicit Capabilities**: Zero ambient authority; all side-effects must carry verifiable capability tokens.
-3. **Strict Bounds & Locality**: Maintain disciplined line-of-code budgets (&le; 256 LOC per file) to prevent architectural rot and keep code human- and agent-comprehensible.
-4. **Deterministic & Verifiable**: Bit-for-bit reproducible builds, cryptographic provenance attestations, and formal verification gates.
+1. **Zero-Dependency Standard Library**: Favor pure `stdlib` builds (native
+   `.oo`, `std::` Rust, `CGO_ENABLED=0` Go) to eliminate supply-chain bloat.
+2. **Explicit Capabilities**: Zero ambient authority; every external effect
+   requires an unforgeable capability token and fails closed.
+3. **Power-of-2 Code Shape**: Enforce strict structural bounds (`1` role per
+   module, `2` test axes, ≤ `4` nesting levels, ≤ `64` LOC/fn,
+   ≤ `128` cols, ≤ `256` LOC/file) for human and agent legibility.
+4. **Deterministic & Verifiable**: Reproducible single static binaries,
+   post-quantum ML-DSA-65 provenance, and independent cross-model / 8-hat
+   verification gates.
 
 ---
 
 <div align="center">
 
-🎓 **[Tuition, Not Coffee](https://ubermetroid.github.io/tuition-not-coffee/)** — *I already have plenty of coffee. 100% of sponsorships for my open-source projects go directly toward my daughter's college & future fund.*
+🎓 **[Tuition, Not Coffee][tuition]** — *I already have plenty of coffee. 100%
+of sponsorships for my open-source projects go directly toward my daughter's
+college & future fund.*
 
 </div>
+
+[site]: https://ubermetroid.github.io
+[openooda-site]: https://openooda.org
+[openooda-gh]: https://github.com/openOODA
+[studio-site]: https://studio2201.com
+[studio-gh]: https://github.com/studio2201
+[agent-ooda-site]: https://ubermetroid.github.io/agent-ooda/
+[idlescreen-site]: https://idlescreen.github.io
+[idlescreen-gh]: https://github.com/idlescreen
+[idlescreen-studio]: https://github.com/idlescreen/studio
+[idlescreen-pkgs]: https://github.com/idlescreen/packages
+[necrometer-site]: https://necrometer.dev
+[tuition]: https://ubermetroid.github.io/tuition-not-coffee/
+
+[oo-core]: https://github.com/openOODA-core
+[oo-kernel]: https://github.com/openOODA-kernel
+[oo-os]: https://github.com/openOODA-OS
+[oo-tools]: https://github.com/openOODA-tools
+[oo-de]: https://github.com/openOODA-DE
+[oo-apps]: https://github.com/openOODA-apps
+[oo-cloud]: https://github.com/openOODA-cloud
+[oo-agents]: https://github.com/openOODA-agents
+[oo-hub]: https://github.com/openOODA/install/releases/tag/hub
+[oo-catalog]: https://github.com/openOODA/catalog
+
+[st-cli]: https://github.com/studio2201/cli
+[st-action]: https://github.com/studio2201/studio2201
+[st-snip]: https://github.com/studio2201/snip
+[st-vigil]: https://github.com/studio2201/vigil
+[st-aegis]: https://github.com/studio2201/aegis
+[st-proven]: https://github.com/studio2201/proven
+[st-boneyard]: https://github.com/studio2201/boneyard
+
+[st-kelp]: https://studio2201.github.io/kelp/
+[st-reef]: https://studio2201.github.io/reef/
+[st-tide]: https://studio2201.github.io/tide/
+[st-coral]: https://studio2201.github.io/coral/
+[st-seabed]: https://studio2201.github.io/seabed/
+[st-shoal]: https://studio2201.github.io/shoal/
+[st-sonar]: https://studio2201.github.io/sonar/
