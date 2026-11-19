@@ -8,8 +8,8 @@ Building capability-secure computing stacks, zero-dependency systems & agent
 tooling, post-quantum supply-chain gates, and Wayland-native desktop software.
 
 [Website][site] • [openOODA][openooda-site] • [studio2201][studio-site] •
-[agent-ooda][agent-ooda-site] • [IdleScreen][idlescreen-site] •
-[Necrometer][necrometer-site] • [🎓 Tuition, Not Coffee][tuition]
+[agent-ooda][agent-ooda-site] • [Necrometer][necrometer-site] •
+[🎓 Tuition, Not Coffee][tuition]
 
 <br />
 
@@ -58,15 +58,6 @@ tooling, post-quantum supply-chain gates, and Wayland-native desktop software.
   auto-folders), [**Seabed**][st-seabed] (desktop icons), [**Shoal**][st-shoal]
   (Wayland `SNI`/AppIndicator tray), and [**Sonar**][st-sonar] (8-bit stereo
   spectrum corners).
-
-### [IdleScreen][idlescreen-gh] · [idlescreen.github.io][idlescreen-site]
-> **Capability-secured ambient display & arcade screensaver (`v5.0.0`).**
-- Built natively in openOODA (`.oo`) for Linux (`ELF`) and Windows (`PE32+`) as
-  a single event-driven binary (`0.00%` idle CPU), with 10-bit HDR deep color,
-  60–144 Hz refresh matching, and hardware DPMS monitor power-off.
-- **53 built-in scenes**, offline AV1/H.264 renderer & Director TUI
-  ([`studio`][idlescreen-studio]), and signed APT/RPM/pacman
-  [`packages`][idlescreen-pkgs] channel.
 
 ---
 
@@ -162,10 +153,6 @@ college & future fund.*
 [studio-site]: https://studio2201.com
 [studio-gh]: https://github.com/studio2201
 [agent-ooda-site]: https://ubermetroid.github.io/agent-ooda/
-[idlescreen-site]: https://idlescreen.github.io
-[idlescreen-gh]: https://github.com/idlescreen
-[idlescreen-studio]: https://github.com/idlescreen/studio
-[idlescreen-pkgs]: https://github.com/idlescreen/packages
 [necrometer-site]: https://necrometer.dev
 [tuition]: https://ubermetroid.github.io/tuition-not-coffee/
 
